@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transaction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.inpi.fr/schemas/frst66 fr-ST66ExterneV100.xsd" xmlns="http://www.inpi.fr/schemas/frst66">
+  <TransactionHeader>
+    <SenderDetails><RequestProducerDateTime>2016-01-04T14:18:19</RequestProducerDateTime></SenderDetails>
+  </TransactionHeader>
+  <TradeMarkTransactionBody>
+    <TransactionContentDetails>
+      <TransactionCode>Extraction hebdomadaire 2016001</TransactionCode>
+      <TransactionData>
+        <TradeMarkDetails>
+
+          <TradeMark operationCode="Update">
+            <RegistrationOfficeCode>FR</RegistrationOfficeCode>
+            <ApplicationNumber>3046121</ApplicationNumber>
+            <ApplicationDate>2000-08-09</ApplicationDate>
+            <FilingPlace>INPI PARIS</FilingPlace>
+            <ApplicationLanguageCode>fr</ApplicationLanguageCode>
+            <ExpiryDate>2020-08-09</ExpiryDate>
+            <MarkCurrentStatusCode>Marque renouvelée</MarkCurrentStatusCode>
+            <WordMarkSpecification>
+              <MarkVerbalElementText>VAL D'AUTOMNE</MarkVerbalElementText>
+            </WordMarkSpecification>
+            <MarkImageDetails>
+              <MarkImage>
+                <MarkImageFilename>FMARK0000000003046121</MarkImageFilename>
+                <MarkImageFileFormat/>
+              </MarkImage>
+            </MarkImageDetails>
+            <GoodsServicesDetails>
+              <GoodsServices>
+                <ClassificationKindCode>Nice</ClassificationKindCode>
+                <ClassDescriptionDetails>
+                  <ClassDescription>
+                    <ClassNumber>29</ClassNumber>
+                    <GoodsServicesDescription languageCode="fr">Lait et produits laitiers, notamment fromages.</GoodsServicesDescription>
+                  </ClassDescription>
+                </ClassDescriptionDetails>
+              </GoodsServices>
+            </GoodsServicesDetails>
+            <ApplicantDetails>
+              <Applicant>
+                <ApplicantIdentifier identifierKindCode="FR">786920306</ApplicantIdentifier>
+                <ApplicantSequenceNumber>1</ApplicantSequenceNumber>
+                <ApplicantAddressBook>
+                  <FormattedNameAddress>
+                    <Name>
+                      <FormattedName>
+                        <LastName>CORA, SOCIETE PAR ACTIONS SIMPLIFIEE UNIPERSONNELLE</LastName>
+                        <OrganizationName>CORA, SOCIETE PAR ACTIONS SIMPLIFIEE UNIPERSONNELLE</OrganizationName>
+                      </FormattedName>
+                    </Name>
+                    <Address>
+                      <AddressCountryCode>FR</AddressCountryCode>
+                      <FormattedAddress>
+                        <AddressStreet>40 rue la Boétie</AddressStreet>
+                        <AddressCity>PARIS</AddressCity>
+                        <AddressPostcode>75008</AddressPostcode>
+                      </FormattedAddress>
+                    </Address>
+                  </FormattedNameAddress>
+                </ApplicantAddressBook>
+              </Applicant>
+            </ApplicantDetails>
+            <RepresentativeDetails>
+              <Representative>
+                <RepresentativeIdentifier/>
+                <RepresentativeSequenceNumber>1</RepresentativeSequenceNumber>
+                <RepresentativeAddressBook>
+                  <FormattedNameAddress>
+                    <Name>
+                      <FormattedName>
+                        <LastName>INLEX IP EXPERTISE</LastName>
+                        <OrganizationName>INLEX IP EXPERTISE</OrganizationName>
+                      </FormattedName>
+                    </Name>
+                    <Address>
+                      <AddressCountryCode>FR</AddressCountryCode>
+                      <FormattedAddress>
+                        <AddressStreet>68 RUE PIERRE CHARRON</AddressStreet>
+                        <AddressCity>PARIS</AddressCity>
+                        <AddressPostcode>75008</AddressPostcode>
+                      </FormattedAddress>
+                    </Address>
+                  </FormattedNameAddress>
+                </RepresentativeAddressBook>
+              </Representative>
+            </RepresentativeDetails>
+            <MarkRecordDetails>
+              <MarkRecord>
+                <BasicRecord>
+                  <RecordIdentifier>Changement d'adresse</RecordIdentifier>
+                  <RecordFilingDate>2015-12-07</RecordFilingDate>
+                  <BasicRecordKind>Inscription</BasicRecordKind>
+                  <RecordReference>659044</RecordReference>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2016-01</PublicationIdentifier>
+                      <PublicationDate>2016-01-08</PublicationDate>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                  <ClaimantDetails>
+                    <Claimant>
+                      <ClaimantAddressBook>
+                        <FormattedNameAddress>
+                          <Name>
+                            <FormattedName>
+                              <LastName>CORA</LastName>
+                              <OrganizationName>CORA</OrganizationName>
+                            </FormattedName>
+                          </Name>
+                        </FormattedNameAddress>
+                      </ClaimantAddressBook>
+                    </Claimant>
+                  </ClaimantDetails>
+                </BasicRecord>
+              </MarkRecord>
+              <MarkRecord>
+                <BasicRecord>
+                  <BasicRecordKind>Publication</BasicRecordKind>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2000-37</PublicationIdentifier>
+                      <PublicationDate>2000-09-15</PublicationDate>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                </BasicRecord>
+              </MarkRecord>
+              <MarkRecord>
+                <BasicRecord>
+                  <BasicRecordKind>Enregistrement sans modification</BasicRecordKind>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2001-02</PublicationIdentifier>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                </BasicRecord>
+              </MarkRecord>
+              <MarkRecord>
+                <BasicRecord>
+                  <RecordFilingDate>2010-07-12</RecordFilingDate>
+                  <BasicRecordKind>Renouvellement sans limitation</BasicRecordKind>
+                  <RecordReference>2446188</RecordReference>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2010-36</PublicationIdentifier>
+                      <PublicationDate>2010-09-10</PublicationDate>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                </BasicRecord>
+              </MarkRecord>
+            </MarkRecordDetails>
+          </TradeMark>
+
+          <TradeMark operationCode="Update">
+            <RegistrationOfficeCode>FR</RegistrationOfficeCode>
+            <ApplicationNumber>3047646</ApplicationNumber>
+            <ApplicationDate>2000-08-18</ApplicationDate>
+            <FilingPlace>STRASBOURG (CENTRE I.N.P.I.)</FilingPlace>
+            <ApplicationLanguageCode>fr</ApplicationLanguageCode>
+            <ExpiryDate>2020-08-18</ExpiryDate>
+            <MarkCurrentStatusCode>Marque renouvelée</MarkCurrentStatusCode>
+            <WordMarkSpecification>
+              <MarkVerbalElementText>H@PPY SMILE</MarkVerbalElementText>
+            </WordMarkSpecification>
+            <MarkImageDetails>
+              <MarkImage>
+                <MarkImageFilename>FMARK0000000003047646</MarkImageFilename>
+                <MarkImageFileFormat/>
+              </MarkImage>
+            </MarkImageDetails>
+            <GoodsServicesDetails>
+              <GoodsServices>
+                <ClassificationKindCode>Nice</ClassificationKindCode>
+                <ClassDescriptionDetails>
+                  <ClassDescription>
+                    <ClassNumber>00</ClassNumber>
+                    <GoodsServicesDescription languageCode="fr">Caméras, caméras vidéo, caméras numériques, magnétoscopes, appareils photo, y compris numériques, appareils de projection de diapositives, écrans de projection et, plus généralement, appareils et instruments photographiques et cinématographiques. Lecteurs de cassettes, lecteurs de disques compacts ou de disques numériques, appareils de radio y compris portables, appareils de télévision, haut-parleurs, télécopieurs, photocopieurs, appareils téléphoniques, y compris numériques, sans-fil ou portables et, plus généralement, appareils pour l'enregistrement, la transmission, la reproduction du son ou des images. Bandes vidéo, films pour l'enregistrement du son ou des images ; disques compacts (audio-vidéo), disques acoustiques, disques ou cassettes magnétiques, disques numériques. Calculatrices de poche, machines à calculer, instruments de mesure, agendas électroniques. Fers à repasser électriques y compris avec centrale-vapeur ; appareils électrothermiques à onduler les cheveux. Appareils pour jeux conçus pour être utilisés uniquement avec récepteur de télévision ou avec écran d'ordinateur. Logiciels, progiciels, programmes d'ordinateurs et mémoires pour ordinateurs destinés notamment aux réseaux de communication électronique et plus généralement logiciels, progiciels, programmes d'ordinateurs et mémoires d'ordinateurs ; appareils et instruments pour la transmission, l'enregistrement, le stockage, la reproduction, la conversion et la réception de données et de signaux analogiques ou numériques (reproduisant notamment la voix, le son, du texte ou des images) par voie hertzienne, par câbles ou fils, par fibres optiques ou par rayonnement électromagnétique ; ordinateurs, périphériques d'ordinateurs, modems, composants électroniques, circuits intégrés, lecteurs (informatique), moniteurs (matériels et programmes informatiques), imprimantes d'ordinateurs et plus généralement matériel informatique (autre que le matériel imprimé) ; appareils pour le traitement de l'information ; supports de données magnétiques, numériques ou optiques. Accumulateurs de vapeur ou de chaleur, appareils et installations pour l'adoucissement de l'eau ; appareils et installations de climatisation et de conditionnement d'air, hottes aspirantes de cuisine, hottes d'aération ; armoires frigorifiques, congélateurs, réfrigérateurs ; cafetières électriques, gaufriers électriques, friteuses électriques, grille-pain, rôtissoires, fours (à l'exception des fours pour expérience) ; appareils à bronzer, sèche-cheveux ; éviers, lavabos ; lustres ; et, plus généralement, appareils d'éclairage, de chauffage, de production de vapeur, de cuisson, de réfrigération, de congélation, de surgélation, de ventilation, de distribution d'eau et installations sanitaires. Diffusion d'annonces publicitaires, diffusion (distribution) d'échantillons, diffusion de matériel publicitaire (tracts, prospectus, imprimés, échantillons), publication de textes publicitaires, courrier publicitaire, location d'espaces publicitaires et, plus généralement, publicité ; promotion des ventes (pour des tiers). Services d'installation, de maintenance, d'entretien et de réparation, notamment dans les domaines de l'électro-ménager, des appareils audio/vidéo ou des ordinateurs.</GoodsServicesDescription>
+                  </ClassDescription>
+                  <ClassDescription>
+                    <ClassNumber>09</ClassNumber>
+                  </ClassDescription>
+                  <ClassDescription>
+                    <ClassNumber>11</ClassNumber>
+                  </ClassDescription>
+                  <ClassDescription>
+                    <ClassNumber>35</ClassNumber>
+                  </ClassDescription>
+                  <ClassDescription>
+                    <ClassNumber>37</ClassNumber>
+                  </ClassDescription>
+                </ClassDescriptionDetails>
+              </GoodsServices>
+            </GoodsServicesDetails>
+            <ApplicantDetails>
+              <Applicant>
+                <ApplicantIdentifier identifierKindCode="FR">786920306</ApplicantIdentifier>
+                <ApplicantSequenceNumber>1</ApplicantSequenceNumber>
+                <ApplicantAddressBook>
+                  <FormattedNameAddress>
+                    <Name>
+                      <FormattedName>
+                        <LastName>CORA, Société par Actions Simplifiée</LastName>
+                        <OrganizationName>CORA, Société par Actions Simplifiée</OrganizationName>
+                      </FormattedName>
+                    </Name>
+                    <Address>
+                      <AddressCountryCode>FR</AddressCountryCode>
+                      <FormattedAddress>
+                        <AddressStreet>40 rue de La Boétie</AddressStreet>
+                        <AddressCity>PARIS</AddressCity>
+                        <AddressPostcode>75008</AddressPostcode>
+                      </FormattedAddress>
+                    </Address>
+                  </FormattedNameAddress>
+                </ApplicantAddressBook>
+              </Applicant>
+            </ApplicantDetails>
+            <RepresentativeDetails>
+              <Representative>
+                <RepresentativeIdentifier/>
+                <RepresentativeSequenceNumber>1</RepresentativeSequenceNumber>
+                <RepresentativeAddressBook>
+                  <FormattedNameAddress>
+                    <Name>
+                      <FormattedName>
+                        <LastName>CABINET NUSS</LastName>
+                        <OrganizationName>CABINET NUSS</OrganizationName>
+                      </FormattedName>
+                    </Name>
+                    <Address>
+                      <AddressCountryCode>FR</AddressCountryCode>
+                      <FormattedAddress>
+                        <AddressStreet>10 rue Jacques Kablé</AddressStreet>
+                        <AddressCity>STRASBOURG CEDEX</AddressCity>
+                        <AddressPostcode>67080</AddressPostcode>
+                      </FormattedAddress>
+                    </Address>
+                  </FormattedNameAddress>
+                </RepresentativeAddressBook>
+              </Representative>
+            </RepresentativeDetails>
+            <MarkRecordDetails>
+              <MarkRecord>
+                <BasicRecord>
+                  <RecordIdentifier>Changement de nature juridique</RecordIdentifier>
+                  <RecordFilingDate>2010-10-25</RecordFilingDate>
+                  <BasicRecordKind>Inscription</BasicRecordKind>
+                  <RecordReference>534478</RecordReference>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2010-47</PublicationIdentifier>
+                      <PublicationDate>2010-11-26</PublicationDate>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                </BasicRecord>
+              </MarkRecord>
+              <MarkRecord>
+                <BasicRecord>
+                  <RecordIdentifier>Changement d'adresse</RecordIdentifier>
+                  <RecordFilingDate>2015-12-07</RecordFilingDate>
+                  <BasicRecordKind>Inscription</BasicRecordKind>
+                  <RecordReference>659044</RecordReference>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2016-01</PublicationIdentifier>
+                      <PublicationDate>2016-01-08</PublicationDate>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                  <ClaimantDetails>
+                    <Claimant>
+                      <ClaimantAddressBook>
+                        <FormattedNameAddress>
+                          <Name>
+                            <FormattedName>
+                              <LastName>CORA</LastName>
+                              <OrganizationName>CORA</OrganizationName>
+                            </FormattedName>
+                          </Name>
+                        </FormattedNameAddress>
+                      </ClaimantAddressBook>
+                    </Claimant>
+                  </ClaimantDetails>
+                </BasicRecord>
+              </MarkRecord>
+              <MarkRecord>
+                <BasicRecord>
+                  <BasicRecordKind>Publication</BasicRecordKind>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2000-39</PublicationIdentifier>
+                      <PublicationDate>2000-09-29</PublicationDate>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                </BasicRecord>
+              </MarkRecord>
+              <MarkRecord>
+                <BasicRecord>
+                  <BasicRecordKind>Enregistrement sans modification</BasicRecordKind>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2001-04</PublicationIdentifier>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                </BasicRecord>
+              </MarkRecord>
+              <MarkRecord>
+                <BasicRecord>
+                  <RecordFilingDate>2010-08-31</RecordFilingDate>
+                  <BasicRecordKind>Renouvellement sans limitation</BasicRecordKind>
+                  <RecordReference>2449523</RecordReference>
+                  <RecordPublicationDetails>
+                    <RecordPublication>
+                      <PublicationIdentifier>2010-42</PublicationIdentifier>
+                      <PublicationDate>2010-10-22</PublicationDate>
+                    </RecordPublication>
+                  </RecordPublicationDetails>
+                </BasicRecord>
+              </MarkRecord>
+            </MarkRecordDetails>
+          </TradeMark>
+        </TradeMarkDetails>
+      </TransactionData>
+    </TransactionContentDetails>
+  </TradeMarkTransactionBody>
+</Transaction>
