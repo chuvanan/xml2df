@@ -106,7 +106,7 @@ selected_tags = list(
     c("MarkRecordDetails", "PublicationDate")
 )
 
-selected_xpaths = lapply(selected_tags, xpath_builder)
+selected_xpaths = vapply(selected_tags, xpath_builder, character(1L))
 nms = vapply(selected_tags, function(s) if (length(s) == 1L) return(s) else paste0(s, collapse = "_"), character(1L))
 
 
