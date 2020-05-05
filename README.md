@@ -23,5 +23,5 @@ renv::restore()
   [libxml2](http://xmlsoft.org/) - actually, a subset of `libxml2`. `XML`'s been
   developed by the legendary Duncan Temple Lang (R Core Team) - also based on
   `libxml2`. In general, `xml2` will be easier to use for simple tasks thanks to
-  its user-friendly API while `XML` should be preferred for more heavier and
+  its user-friendly API while `XML` should be preferred for heavier and more
   complicated tasks.
