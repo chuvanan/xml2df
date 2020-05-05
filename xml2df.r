@@ -8,24 +8,17 @@ tibble = tibble::tibble
 
 ## helper functions ------------------------------------------------------------
 
-find_element = function(x, tag) {
+xpath_builder = function(tags) {
 
-    if (missing(tag)) stop("Argument `tag` is missing, with no default", call. = FALSE)
-    contents = xml_contents(x)
+    stopifnot(
+        "`tags` is not a character vector" = is.character(tags),
+        "`tags` cannot be a zero-length vector" = length(tags) > 0
+    )
 
-    if (length(contents) == 0L) {
-        parent = xml_parent(x)
-        found = xml_name(parent) == tag
-        if (found) return(xml_text(parent))
-        out = list()
-    } else {
-        ## Naming element adopted from https://github.com/r-lib/xml2/blob/master/R/as_list.R#L62
-        out = lapply(seq_along(contents), function(i) find_element(contents[[i]], tag))
-        nms = ifelse(xml_type(contents) == "element", xml_name(contents), "")
-        names(out) = nms
-    }
-
-    unlist(out)
+    len = length(tags)
+    if (len == 1L) out = sprintf("//d1:%s", tags)
+    if (len > 1L) out = paste0("//d1:", tags, collapse = "")
+    out
 }
 
 make_tibble = function(res) {
@@ -48,19 +41,27 @@ make_tibble = function(res) {
         ExpiryDate = as_is(res["ExpiryDate"]),
         MarkImageFilename = as_is(res["MarkImageFilename"]),
         ClassNumber = as_is(res["ClassNumber"]),
-        ApplicantIdentifier = as_is(res["ApplicantIdentifier"]),
-        ApplicantSequenceNumber = as_is(res["ApplicantSequenceNumber"]),
-        LastName = as_is(res["LastName"]),
-        OrganizationName = as_is(res["OrganizationName"]),
-        AddressCountryCode = as_is(res["AddressCountryCode"]),
-        AddressStreet = as_is(res["AddressStreet"]),
-        AddressCity = as_is(res["AddressCity"]),
-        AddressPostcode = as_is(res["AddressPostcode"]),
-        RecordIdentifier = as_is(res["RecordIdentifier"]),
-        RecordFilingDate = as_is(res["RecordFilingDate"]),
-        BasicRecordKind = as_is(res["BasicRecordKind"]),
-        RecordReference = as_is(res["RecordReference"]),
-        PublicationDate = as_is(res["PublicationDate"])
+
+        ApplicantDetails_ApplicantIdentifier = as_is(res["ApplicantDetails_ApplicantIdentifier"]),
+        ApplicantDetails_ApplicantSequenceNumber = as_is(res["ApplicantDetails_ApplicantSequenceNumber"]),
+        ApplicantDetails_LastName = as_is(res["ApplicantDetails_LastName"]),
+        ApplicantDetails_OrganizationName = as_is(res["ApplicantDetails_OrganizationName"]),
+        ApplicantDetails_AddressCountryCode = as_is(res["ApplicantDetails_AddressCountryCode"]),
+        ApplicantDetails_AddressStreet = as_is(res["ApplicantDetails_AddressStreet"]),
+        ApplicantDetails_AddressCity = as_is(res["ApplicantDetails_AddressCity"]),
+        ApplicantDetails_AddressPostcode = as_is(res["ApplicantDetails_AddressPostcode"]),
+
+        RepresentativeDetails_LastName = as_is(res["RepresentativeDetails_LastName"]),
+        RepresentativeDetails_OrganizationName = as_is(res["RepresentativeDetails_OrganizationName"]),
+        RepresentativeDetails_AddressStreet = as_is(res["RepresentativeDetails_AddressStreet"]),
+        RepresentativeDetails_AddressCity = as_is(res["RepresentativeDetails_AddressCity"]),
+        RepresentativeDetails_AddressPostcode = as_is(res["RepresentativeDetails_AddressPostcode"]),
+
+        MarkRecordDetails_RecordIdentifier = as_is(res["MarkRecordDetails_RecordIdentifier"]),
+        MarkRecordDetails_RecordFilingDate = as_is(res["MarkRecordDetails_RecordFilingDate"]),
+        MarkRecordDetails_BasicRecordKind = as_is(res["MarkRecordDetails_BasicRecordKind"]),
+        MarkRecordDetails_RecordReference = as_is(res["MarkRecordDetails_RecordReference"]),
+        MarkRecordDetails_PublicationDate = as_is(res["MarkRecordDetails_PublicationDate"])
     )
     out
 }
@@ -69,46 +70,60 @@ make_tibble = function(res) {
 ## xml extractor ---------------------------------------------------------------
 
 transaction = read_xml(here("FR_FRAMDST66_2016-01.xml"), encoding = "UTF-8")
+trademarks = xml_find_all(transaction, xpath = "//d1:TradeMark[@operationCode='Update']")
 
-selected_tags = c("ApplicationNumber", "ApplicationDate", "FilingPlace",
-                  "ExpiryDate", "MarkImageFilename", "ClassNumber",
-                  "ApplicantIdentifier", "ApplicantSequenceNumber", "LastName",
-                  "OrganizationName", "AddressCountryCode", "AddressStreet",
-                  "AddressCity", "AddressPostcode", "RecordIdentifier",
-                  "RecordFilingDate", "BasicRecordKind", "RecordReference",
-                  "PublicationDate")
-
-trademark_details = xml_contents(xml_find_all(transaction, xpath = "/*/*[2]/*/*/*"))
-NROW(trademark_details)
+class(trademarks)
+## [1] "xml_nodeset"
+NROW(trademarks)
 ## [1] 5619
 
 
-## N = NROW(trademark_details)
-N = 100L # for demo
+selected_tags = list(
+    "ApplicationNumber",
+    "ApplicationDate",
+    "FilingPlace",
+    "ExpiryDate",
+    "MarkImageFilename",
+    "ClassNumber",
+    c("ApplicantDetails", "ApplicantIdentifier"),
+    c("ApplicantDetails", "ApplicantSequenceNumber"),
+    c("ApplicantDetails", "LastName"),
+    c("ApplicantDetails", "OrganizationName"),
+    c("ApplicantDetails", "AddressCountryCode"),
+    c("ApplicantDetails", "AddressStreet"),
+    c("ApplicantDetails", "AddressCity"),
+    c("ApplicantDetails", "AddressPostcode"),
+    c("RepresentativeDetails", "LastName"),
+    c("RepresentativeDetails", "OrganizationName"),
+    c("RepresentativeDetails", "AddressStreet"),
+    c("RepresentativeDetails", "AddressCity"),
+    c("RepresentativeDetails", "AddressPostcode"),
+    c("MarkRecordDetails", "RecordIdentifier"),
+    c("MarkRecordDetails", "RecordFilingDate"),
+    c("MarkRecordDetails", "BasicRecordKind"),
+    c("MarkRecordDetails", "BasicRecordKind"),
+    c("MarkRecordDetails", "RecordReference"),
+    c("MarkRecordDetails", "PublicationDate")
+)
+
+selected_xpaths = lapply(selected_tags, xpath_builder)
+nms = vapply(selected_tags, function(s) if (length(s) == 1L) return(s) else paste0(s, collapse = "_"), character(1L))
+
+
+## N = NROW(trademarks)
+N = 10L # for demo
 output = list("vector", N)
 
 
 tic()
 for (i in seq_len(N)) {
-    res = lapply(selected_tags, function(t) find_element(trademark_details[[i]], t))
+    ## fixme: how to loop over xml_nodeset while using `xml_find_all`?
+    res = lapply(selected_xpaths, function(t) xml_text(xml_find_all(trademarks[[i]], xpath = t)))
     names(res) = selected_tags
     output[[i]] = make_tibble(res)
 }
 toc()
-## 13.154 sec elapsed
 
 
 output = do.call("rbind", output)
 head(output)
-## # A tibble: 6 x 19
-##   ApplicationNumb… ApplicationDate FilingPlace ExpiryDate MarkImageFilena… ClassNumber ApplicantIdenti… ApplicantSequen… LastName
-##   <chr>            <chr>           <chr>       <chr>      <chr>            <named lis> <chr>            <chr>            <named >
-## 1 3046121          2000-08-09      INPI PARIS  2020-08-09 FMARK0000000003… <chr [1]>   786920306        1                <chr [3…
-## 2 3047646          2000-08-18      STRASBOURG… 2020-08-18 FMARK0000000003… <chr [5]>   786920306        1                <chr [3…
-## 3 3062575          2000-11-06      I.N.P.I. P… 2020-11-06 FMARK0000000003… <chr [3]>   786920306        1                <chr [4…
-## 4 3065287          2000-11-17      I.N.P.I. P… 2020-11-17 FMARK0000000003… <chr [4]>   786920306        1                <chr [3…
-## 5 3073011          2000-12-22      I.N.P.I. P… 2020-12-22 FMARK0000000003… <chr [19]>  786920306        1                <chr [3…
-## 6 3074035          2000-12-29      I.N.P.I. P… 2020-12-29 FMARK0000000003… <chr [5]>   330814732        1                <chr [7…
-## # … with 10 more variables: OrganizationName <named list>, AddressCountryCode <named list>, AddressStreet <named list>,
-## #   AddressCity <named list>, AddressPostcode <named list>, RecordIdentifier <named list>, RecordFilingDate <named list>,
-## #   BasicRecordKind <named list>, RecordReference <named list>, PublicationDate <named list>
