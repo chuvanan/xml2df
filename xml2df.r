@@ -119,7 +119,7 @@ tic()
 for (i in seq_len(N)) {
     ## fixme: how to loop over xml_nodeset while using `xml_find_all`?
     res = lapply(selected_xpaths, function(t) xml_text(xml_find_all(trademarks[[i]], xpath = t)))
-    names(res) = selected_tags
+    names(res) = nms
     output[[i]] = make_tibble(res)
 }
 toc()
