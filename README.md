@@ -28,7 +28,11 @@ renv::restore()
 
 * How a XML parser works (for example: `libxml2`)?
 
-
+* Rules for building xpath query:
+  * Place two backslashes in front of the top node for jumping across nodes
+  * Separate subsequent nodes with a single backslash
+  * Add a period before search query to make the search to be local (that's
+    particularly useful when looping over nodesets)
 
 ### Resources
 
