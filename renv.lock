@@ -9,6 +9,13 @@
     ]
   },
   "Packages": {
+    "XML": {
+      "Package": "XML",
+      "Version": "3.99-0.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c1616606f097075542c12fb8a10a071e"
+    },
     "assertthat": {
       "Package": "assertthat",
       "Version": "0.2.1",
