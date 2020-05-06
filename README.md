@@ -41,3 +41,14 @@ renv::restore()
 * [XML - Namespaces](https://www.tutorialspoint.com/xml/xml_namespaces.htm)
 
 * [Quick Guide to XML in R](https://lecy.github.io/Open-Data-for-Nonprofit-Research/Quick_Guide_to_XML_in_R.html)
+
+* [XML Files](https://www.xmlfiles.com/)
+
+* [XML Tutorial](https://www.w3schools.com/xml/default.asp)
+
+* XML in a Nutshell by Elliotte Rusty Harold; W. Scott Means
+
+* Introduction to Data Technologies by Paul Murrell
+
+* XML and Web Technologies for Data Sciences with R by Deb Nolan and Duncan
+  Temple Lang
