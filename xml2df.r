@@ -18,7 +18,7 @@ xpath_builder = function(tags) {
     len = length(tags)
     ## note: `.` makes search to be local
     if (len == 1L) out = sprintf(".//d1:%s", tags)
-    if (len > 1L) out = paste0(".//d1:", tags, collapse = "")
+    if (len > 1L) out = paste0(".", paste0("//d1:", tags, collapse = ""))
     out
 }
 
