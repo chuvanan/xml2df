@@ -112,7 +112,7 @@ nms = vapply(selected_tags, function(s) if (length(s) == 1L) return(s) else past
 
 
 ## N = NROW(trademarks)
-N = 2L # for demo
+N = 10L # for demo
 output = vector("list", N)
 
 
@@ -123,7 +123,27 @@ for (i in seq_len(N)) {
     output[[i]] = make_tibble(res)
 }
 toc()
+## 2.737 sec elapsed
 
 
 output = do.call("rbind", output)
 head(output)
+## # A tibble: 6 x 24
+##   ApplicationNumb… ApplicationDate FilingPlace ExpiryDate MarkImageFilena… ClassNumber
+##   <chr>            <chr>           <chr>       <chr>      <chr>            <named lis>
+## 1 3046121          2000-08-09      INPI PARIS  2020-08-09 FMARK0000000003… <chr [1]>
+## 2 3047646          2000-08-18      STRASBOURG… 2020-08-18 FMARK0000000003… <chr [5]>
+## 3 3062575          2000-11-06      I.N.P.I. P… 2020-11-06 FMARK0000000003… <chr [3]>
+## 4 3065287          2000-11-17      I.N.P.I. P… 2020-11-17 FMARK0000000003… <chr [4]>
+## 5 3073011          2000-12-22      I.N.P.I. P… 2020-12-22 FMARK0000000003… <chr [19]>
+## 6 3074035          2000-12-29      I.N.P.I. P… 2020-12-29 FMARK0000000003… <chr [5]>
+## # … with 18 more variables: ApplicantDetails_ApplicantIdentifier <chr>,
+## #   ApplicantDetails_ApplicantSequenceNumber <chr>, ApplicantDetails_LastName <chr>,
+## #   ApplicantDetails_OrganizationName <chr>, ApplicantDetails_AddressCountryCode <chr>,
+## #   ApplicantDetails_AddressStreet <chr>, ApplicantDetails_AddressCity <chr>,
+## #   ApplicantDetails_AddressPostcode <chr>, RepresentativeDetails_LastName <chr>,
+## #   RepresentativeDetails_OrganizationName <chr>, RepresentativeDetails_AddressStreet <chr>,
+## #   RepresentativeDetails_AddressCity <chr>, RepresentativeDetails_AddressPostcode <chr>,
+## #   MarkRecordDetails_RecordIdentifier <chr>, MarkRecordDetails_RecordFilingDate <chr>,
+## #   MarkRecordDetails_BasicRecordKind <chr>, MarkRecordDetails_RecordReference <chr>,
+## #   MarkRecordDetails_PublicationDate <chr>
