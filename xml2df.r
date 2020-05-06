@@ -16,8 +16,9 @@ xpath_builder = function(tags) {
     )
 
     len = length(tags)
-    if (len == 1L) out = sprintf("//d1:%s", tags)
-    if (len > 1L) out = paste0("//d1:", tags, collapse = "")
+    ## note: `.` makes search to be local
+    if (len == 1L) out = sprintf(".//d1:%s", tags)
+    if (len > 1L) out = paste0(".//d1:", tags, collapse = "")
     out
 }
 
@@ -111,13 +112,12 @@ nms = vapply(selected_tags, function(s) if (length(s) == 1L) return(s) else past
 
 
 ## N = NROW(trademarks)
-N = 10L # for demo
-output = list("vector", N)
+N = 2L # for demo
+output = vector("list", N)
 
 
 tic()
 for (i in seq_len(N)) {
-    ## fixme: how to loop over xml_nodeset while using `xml_find_all`?
     res = lapply(selected_xpaths, function(t) xml_text(xml_find_all(trademarks[[i]], xpath = t)))
     names(res) = nms
     output[[i]] = make_tibble(res)
