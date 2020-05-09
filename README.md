@@ -34,6 +34,13 @@ renv::restore()
   * Add a period before search query to make the search to be local (that's
     particularly useful when looping over nodesets)
 
+### Sample projects
+
+* [dvhc-vietnam](https://github.com/chuvanan/dvhc-vietnam): Convert Vietnam's
+  administrative divisions data from XML to CSV/JSON
+
+* [sdmx](https://github.com/chuvanan/sdmx): Vietnam's National Summary Data
+
 ### Resources
 
 * [Libxml Tutorial](http://xmlsoft.org/tutorial/index.html)
