@@ -53,6 +53,8 @@ renv::restore()
 
 * [XML Tutorial](https://www.w3schools.com/xml/default.asp)
 
+* [xml default namespace rage](https://gist.github.com/jennybc/bbe4de369e8d3c9621c2b43949223b3b)
+
 * XML in a Nutshell by Elliotte Rusty Harold; W. Scott Means
 
 * Introduction to Data Technologies by Paul Murrell
