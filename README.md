@@ -33,6 +33,7 @@ renv::restore()
   * Separate subsequent nodes with a single backslash
   * Add a period before search query to make the search to be local (that's
     particularly useful when looping over nodesets)
+  * When things go wrong, it's likely due to namespace
 
 ### Sample projects
 
