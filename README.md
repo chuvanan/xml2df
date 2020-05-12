@@ -49,7 +49,15 @@ renv::restore()
 
   Don't try to open a big file in editor or browser.
 
-
+* Work with a small subset of data first. That's a generally good practice
+  applying well to this situation. There are two main reasons:
+  * To save time. Reading and processing large XML files can be time-consuming,
+    especially when repeated several times before reaching the right
+    solution (it happens more often than you think).
+  * To facilitate solution design. Usually, XML document's structure has the
+    same layout (branches, elements) at different levels (nodesets). You don't a
+    whole document (= hundreds of thousands elements), just a couple of elements
+    in each nodesets is enough for programming.
 
 ### Sample projects
 
