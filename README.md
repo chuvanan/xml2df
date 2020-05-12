@@ -55,9 +55,9 @@ renv::restore()
     especially when repeated several times before reaching the right
     solution (it happens more often than you think).
   * To facilitate solution design. Usually, XML document's structure has the
-    same layout (branches, elements) at different levels (nodesets). You don't a
-    whole document (= hundreds of thousands elements), just a couple of elements
-    in each nodesets is enough for programming.
+    same layout (branches, elements) at different levels (nodesets). You don't
+    need a whole document (= hundreds of thousands elements), just a couple of
+    elements in each nodesets is enough for programming.
 
 ### Sample projects
 
