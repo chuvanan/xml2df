@@ -58,6 +58,9 @@ renv::restore()
 
 * [sdmx](https://github.com/chuvanan/sdmx): Vietnam's National Summary Data
 
+* [vietnam-wdi](https://github.com/chuvanan/xml2df/blob/master/vietnam-wdi.r):
+  Parse WorldBank's Vietnam World Development Indicators.
+
 ### Resources
 
 * [Libxml Tutorial](http://xmlsoft.org/tutorial/index.html)
