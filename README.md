@@ -61,6 +61,9 @@ renv::restore()
 * [vietnam-wdi](https://github.com/chuvanan/xml2df/blob/master/vietnam-wdi.r):
   Parse WorldBank's Vietnam World Development Indicators.
 
+* [weather-forecast](https://github.com/chuvanan/xml2df/blob/master/xml-weather-forecast.r):
+  Parse weather forecast XML service
+
 ### Resources
 
 * [Libxml Tutorial](http://xmlsoft.org/tutorial/index.html)
