@@ -1,4 +1,5 @@
 ## https://www.yr.no/place/Viet_Nam/H%E1%BB%93_Ch%C3%AD_Minh/Ho_Chi_Minh_City/forecast.xml
+## https://frost.met.no/index.html
 
 
 
