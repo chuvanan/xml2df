@@ -35,6 +35,22 @@ renv::restore()
     particularly useful when looping over nodesets)
   * When things go wrong, it's likely due to namespace
 
+
+### Strategies for extracting data from HTML/XML documents
+
+* Always look at the data. What I mean by "look at the data" is to look at the
+  XML file line by line to have a quick overview of structure, nesting depth,
+  elements, attributes, namespaces (if any). For this task, command line tools
+  such as `head`, `tail`, `less` become very handy.
+
+  My favorite utility is `less`. I can view and naviage a big XML file very
+  quickly with a few keystrokes (`G`: go to the end of file, `g`: go to start of
+  file, `space`: page down, `b`: page up)
+
+  Don't try to open a big file in editor or browser.
+
+
+
 ### Sample projects
 
 * [dvhc-vietnam](https://github.com/chuvanan/dvhc-vietnam): Convert Vietnam's
@@ -55,6 +71,8 @@ renv::restore()
 * [XML Tutorial](https://www.w3schools.com/xml/default.asp)
 
 * [xml default namespace rage](https://gist.github.com/jennybc/bbe4de369e8d3c9621c2b43949223b3b)
+
+* [Memory Management in the the XML Package](http://www.omegahat.net/RSXML/MemoryManagement.html)
 
 * XML in a Nutshell by Elliotte Rusty Harold; W. Scott Means
 
